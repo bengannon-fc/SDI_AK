@@ -19,3 +19,20 @@ The Alaska Wildland Fire Coordinating Group's Fire Modeling and Analysis Committ
 1) The Finney crown fire initiation method is preferred over the Scott and Reinhardt method for calculating potential flame lengths and heat per unit areas.
 2) The standard SDI calculations include an influence of slope aspect on the penetrability sub index to reflect that sun exposed south facing slopes are harder to work on than shaded north facing slopes separate from vegetation and fuel differences. Aspect is not a strong influence on firefighting difficulty in Alaska except through its influence on vegetation and fuels, which are already captured in other model components. The aspect component was removed from the model and the pentrability sub-index denominator was changed from a value of 5 to a value of 4 to reflect one less factor in the sub-index numerator.
 3) The fuel control table, representing the relative ease for walking through and constructing fireline in different fuel types, was customized to better align with Alaska-specific fuel types and fire containment tactics.
+
+**Instructions for Use**
+
+The Alaska SDI calculations script was developed and tested using the terra package version 1.7.39 (Hijmans 2023) in the R language for statistics and computing version 4.3.1 (R Core Team 2023). The script does not include advanced error handling. The end user is responsible for verifying that their inputs are of the correct type, format, and units. The only line in the script that a user should need to modify is the working directory. Change the working directory path to match the location of the script and inputs table (SDI_inputs.csv).
+
+Model inputs are specified in a table that will be read in by the script including:
+1) Path to a digital elevation model (DEM) in meters
+2) Path to a categorical fire behavior fuel model 40 (FBFM40) raster using the Scott and Burgan (2005) classes
+3) Path to a flame length (FL) raster in meters
+4) Path to heat per unit area (HUA) raster in kilojoules per square meter
+5) Path to study area (SA) shapefile to analyze - should include at least a 1-km buffer to minimize edge effects
+6) Path to streets/roads shapefile - assumed to be clipped to the study area
+7) Path to the trails shapefile - assumed to be clipped to the study area
+8) Output directory path - must exist
+9) Output name prefix - will be combined with names for intermediate and final outputs
+
+All file paths should use forward slashes, e.g., "D:/SDI_INPUTS/LA20_Elev_220.tif". It is assumed that all raster inputs have the same extent, resolution, cell alignment, and spatial projection. Raster reprojection and resampling is not automatically completed in the script - this is considered a data preparation task for the user. 
