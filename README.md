@@ -16,6 +16,6 @@ Full details on the standard SDI calculation methods can be found in Risk Manage
 
 The Alaska Wildland Fire Coordinating Group's Fire Modeling and Analysis Committee adopted the following modifications to the standard SDI calculation methods:
 
-1) The standard SDI calculations include an influence of slope aspect on the penetrability sub index to reflect that sun exposed south facing slopes are harder to work on than shaded north facing slopes ignoring vegetation and fuel differences. Aspect is not a strong influence on firefighting difficulty in Alaska except through its influence on vegetation and fuels, which are already captured in other model components. The aspect component was removed from the model and the pentrability sub-index denominator was changed from a value of 5 to a value of 4 to reflect one less factor in the sub-index numerator.
-
-2)  
+1) The Finney crown fire initiation method is preferred over the Scott and Reinhardt method for calculating potential flame lengths and heat per unit areas.
+2) The standard SDI calculations include an influence of slope aspect on the penetrability sub index to reflect that sun exposed south facing slopes are harder to work on than shaded north facing slopes ignoring vegetation and fuel differences. Aspect is not a strong influence on firefighting difficulty in Alaska except through its influence on vegetation and fuels, which are already captured in other model components. The aspect component was removed from the model and the pentrability sub-index denominator was changed from a value of 5 to a value of 4 to reflect one less factor in the sub-index numerator.
+3) The fuel control table, representing the relative ease for walking through and constructing fireline in different fuel types, was customized to better align with Alaska-specific fuel types and fire containment tactics.
