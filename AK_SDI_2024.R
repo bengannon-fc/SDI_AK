@@ -108,7 +108,7 @@ cat('Smoothed energy behavior raster\n\n')
 
 #-> ACCESSIBILITY SUB INDEX
 # Run Euclidean Distance on the streets layer
-# Classify areas within 100 m of a road as a 10, decreasing to 1 where the nearest road is >900 m away
+# Classify areas within 100 m of a road as a 10, decreasing to 1 where the nearest road is >900 m
 cat('#-> Calculating accessibility sub index\n')
 streets_lyr <- vect(streets)
 streets_rast <- rasterize(streets_lyr,DEM,touches=T)
