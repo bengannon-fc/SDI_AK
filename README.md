@@ -35,4 +35,6 @@ Model inputs are specified in a table that will be read in by the script includi
 8) Output directory path - must exist
 9) Output name prefix - will be combined with names for intermediate and final outputs
 
-All file paths should use forward slashes, e.g., "D:/SDI_INPUTS/LA20_Elev_220.tif". It is assumed that all raster inputs have the same extent, resolution, cell alignment, and spatial projection. Raster reprojection and resampling is not automatically completed in the script - this is considered a data preparation task for the user. 
+All file paths should use forward slashes, e.g., "D:/SDI_INPUTS/LA20_Elev_220.tif". It is assumed that all raster inputs have the same extent, resolution, cell alignment, and spatial projection. Raster reprojection and resampling is not automatically completed in the script - this is considered a data preparation task for the user.
+
+The output includes rasters for each sub-index, the numerator, and Suppression Difficulty Index. 
