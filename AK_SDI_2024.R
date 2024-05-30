@@ -113,7 +113,7 @@ cat('#-> Calculating accessibility sub index\n')
 streets_lyr <- vect(streets)
 streets_rast <- rasterize(streets_lyr,DEM,touches=T)
 roaddist <- distance(streets_rast)
-cat('Calculated distance to roads with speedclass < 8\n')
+cat('Calculated distance to roads\n')
 ACC_rtab <- data.frame(Low=c(-1,100,200,300,400,500,600,700,800,900),
                        High=c(100,200,300,400,500,600,700,800,900,1000000),
 					   Val=c(10,9,8,7,6,5,4,3,2,1))
